@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# TODO List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple TODO list application built with React, TypeScript, and Vite. It allows users to add, update, and remove tasks, as well as filter tasks based on their completion status.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To install the project dependencies, run the following command:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To start the development server, run the following command:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+The application will be available at `http://localhost:5173`.
+
+## Architecture and Folders
+
+The project structure is as follows:
+
+- `src/`: Contains the source code of the application.
+  - `components/`: Contains the React components used in the application.
+  - `controllers/`: Contains the controller hooks for managing application logic.
+  - `schemas/`: Contains the schema definitions for the data models.
+  - `services/`: Contains the service files for interacting with external APIs or libraries.
+  - `mutations/`: Contains the mutation hooks for performing data mutations.
+  - `queries/`: Contains the query hooks for fetching data.
+  - `assets/`: Contains the static assets used in the application.
+  - `lib/`: Contains utility functions and helper files.
+  - `main.tsx`: The entry point of the application.
+  - `index.css`: The global CSS file for the application.
